@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <rect width="100" height="100" rx="16" fill="#FDF6ED"/>
+  <!-- Main Steamline S-Curve -->
+  <path d="M 18 56 C 36 56, 42 53, 50 36 C 58 19, 64 16, 82 16" fill="none" stroke="#262521" stroke-width="8" stroke-linecap="square" stroke-linejoin="round"/>
+  <!-- Branch & Ring in Copper -->
+  <path d="M 48 37 C 52 37, 54 37, 60 37" fill="none" stroke="#8B4513" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="68" cy="37" r="10" fill="none" stroke="#8B4513" stroke-width="6"/>
+</svg>

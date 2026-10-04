@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 Page Not Found — Steamline Lab</title>
+  <meta name="description" content="The requested page could not be located on Steamline Lab.">
+  <meta name="theme-color" content="#FAF7F2">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream:  '#FAF7F2',
+            'cream-soft': '#F5EFE6',
+            sand:   '#E6DDD1',
+            'sand-dark': '#D5C8B8',
+            sage: {
+              light:   '#8EAA85',
+              DEFAULT: '#3E533D',
+              dark:    '#2C3B2B',
+            },
+            ink: {
+              DEFAULT: '#181816',
+              mid:     '#3E3D38',
+              muted:   '#74726B',
+            },
+            terracotta: '#9E5028',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-cream text-ink flex flex-col min-h-screen selection:bg-sage-light/30 selection:text-ink">
+  
+  <div class="bg-editorial-grid pointer-events-none -z-10" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header-surface sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html#home" class="flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-sage rounded" aria-label="Steamline Lab Homepage">
+        <img src="logo_horizontal.png" alt="Steamline Lab" class="h-9 sm:h-10 w-auto object-contain">
+      </a>
+      <nav class="flex items-center gap-6 text-sm font-medium">
+        <a href="index.html#home"         class="text-ink-mid hover:text-sage transition-colors">Home</a>
+        <a href="index.html#services"     class="text-ink-mid hover:text-sage transition-colors">Services</a>
+        <a href="index.html#about"        class="text-ink-mid hover:text-sage transition-colors">About</a>
+        <a href="index.html#testimonials" class="text-ink-mid hover:text-sage transition-colors">Outcomes</a>
+        <a href="index.html#team"         class="text-ink-mid hover:text-sage transition-colors">Founders</a>
+        <a href="index.html#contact"      class="text-ink-mid hover:text-sage transition-colors">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 404 Main -->
+  <main class="relative z-10 flex-1 w-full flex flex-col items-center justify-center px-4 py-24">
+    <div class="max-w-lg w-full text-center bg-white border border-sand rounded-xl p-8 sm:p-12 shadow-sm">
+      <div class="section-intro-pill mb-4 mx-auto">
+        404 Route Not Found
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-ink mb-4 tracking-tight">Page Not Located</h1>
+      <p class="text-sm text-ink-mid leading-relaxed mb-8">
+        The requested URL was not found on this server. Return to the homepage or reach out directly to the founders.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-3.5 justify-center">
+        <a href="index.html#home" class="btn-primary px-6 py-3 text-xs uppercase tracking-wider font-semibold">
+          Return to Home
+        </a>
+        <a href="mailto:contact@steamlinelab.com" class="btn-secondary px-6 py-3 text-xs uppercase tracking-wider font-semibold">
+          Email Founders
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative z-10 border-t border-sand py-6 text-center text-xs text-ink-muted bg-cream">
+    &copy; 2026 Steamline Lab. All rights reserved. Full code &amp; IP ownership on delivery.
+  </footer>
+</body>
+</html>

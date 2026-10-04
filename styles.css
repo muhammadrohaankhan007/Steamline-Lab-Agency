@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* ═══════════════════════════════════════════════════════════════
+   STEAMLINE LAB — BESPOKE ARCHITECTURAL DESIGN SYSTEM
+   Curated Palette:
+   • Background: #FAF7F2 (Warm Ecru)
+   • Surface Cards: #FFFFFF
+   • Surface Sand: #F3ECE2
+   • Borders: #E6DDD1 / rgba(38,37,33,0.08)
+   • Botanical Sage: #3E533D (Primary), #526C51 (Hover), #8EAA85 (Soft)
+   • Deep Obsidian: #181816 (Primary Ink), #3E3D38 (Body), #74726B (Muted)
+   • Terracotta Accent: #9E5028
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  --cream:       #FAF7F2;
+  --cream-soft:  #F5EFE6;
+  --sand:        #E6DDD1;
+  --sand-dark:   #D5C8B8;
+  --sage:        #3E533D;
+  --sage-light:  #8EAA85;
+  --sage-dark:   #2C3B2B;
+  --sage-tint:   rgba(62, 83, 61, 0.08);
+  --ink:         #181816;
+  --ink-mid:     #3E3D38;
+  --ink-muted:   #74726B;
+  --copper:      #9E5028;
+  
+  --bg:          var(--cream);
+  --bg-surface:  #FFFFFF;
+  --border-soft: #E6DDD1;
+  --border-firm: #3E533D;
+}
+
+html, body {
+  margin: 0; 
+  padding: 0;
+  width: 100%; 
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+}
+
+*, *::before, *::after { 
+  box-sizing: border-box; 
+}
+
+::selection { 
+  background: #C4D9C0; 
+  color: #181816; 
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar-track { background: #FAF7F2; }
+::-webkit-scrollbar-thumb { background: #D5C8B8; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #3E533D; }
+
+/* ── Subtle Architectural Grid Background ── */
+.bg-editorial-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-size: 48px 48px;
+  background-image:
+    linear-gradient(to right,  rgba(62, 83, 61, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(62, 83, 61, 0.045) 1px, transparent 1px);
+}
+
+/* ── Subtle Ambient Glows ── */
+.ambient-glow-top {
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 850px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(142, 170, 133, 0.18) 0%, rgba(250, 247, 242, 0) 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ── Header ── */
+.header-surface {
+  background: rgba(250, 247, 242, 0.88);
+  border-bottom: 1px solid var(--border-soft);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: all 0.25s ease;
+}
+
+/* ── Card Systems with Purposeful Differentiation ── */
+/* 1. Base Interactive Card */
+.card-base {
+  background: #FFFFFF;
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(24, 24, 22, 0.03), 0 6px 16px rgba(24, 24, 22, 0.02);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+/* 2. Service Cards (Asymmetric Hierarchy) */
+.service-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-soft);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(24, 24, 22, 0.03);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+.service-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+.service-card:hover {
+  border-color: #BAC7B7;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(62, 83, 61, 0.1);
+}
+.service-card:hover::after {
+  background: var(--sage);
+}
+.service-card-featured {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%);
+  border: 1.5px solid #CCD8C8;
+}
+
+/* 3. Team Cards (Human, Portrait-Forward, Non-Clone) */
+.team-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 10px rgba(24, 24, 22, 0.04);
+}
+.team-card:hover {
+  border-color: var(--sage);
+  box-shadow: 0 14px 32px rgba(62, 83, 61, 0.12);
+  transform: translateY(-4px);
+}
+.team-portrait {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: #EFE8DD;
+}
+.team-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.team-card:hover .team-portrait img {
+  transform: scale(1.03);
+}
+
+/* 4. Testimonial Cards (Editorial Proof) */
+.testimonial-spotlight {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8F5F0 100%);
+  border: 1.5px solid #D5C8B8;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(24, 24, 22, 0.05);
+}
+.testimonial-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-soft);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(24, 24, 22, 0.03);
+  transition: all 0.25s ease;
+}
+.testimonial-card:hover {
+  border-color: #BAC7B7;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(62, 83, 61, 0.08);
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  background: var(--sage);
+  color: #FAF7F2;
+  border: 1px solid var(--sage);
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 6px rgba(62, 83, 61, 0.25);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn-primary:hover {
+  background: #181816;
+  border-color: #181816;
+  color: #FAF7F2;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(24, 24, 22, 0.25);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: #FFFFFF;
+  color: var(--ink);
+  border: 1px solid var(--sand-dark);
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn-secondary:hover {
+  background: #FAF7F2;
+  border-color: var(--sage);
+  color: var(--sage-dark);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--sand-dark);
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn-outline:hover {
+  background: rgba(142, 170, 133, 0.15);
+  border-color: var(--sage);
+  color: var(--sage-dark);
+  transform: translateY(-1px);
+}
+
+/* ── Section Introductions (Varying, Human Framing) ── */
+.section-intro-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 12px;
+  background: rgba(62, 83, 61, 0.08);
+  border: 1px solid rgba(62, 83, 61, 0.15);
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--sage);
+  line-height: 1.2;
+}
+
+.section-intro-eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--sage);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-intro-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 2px;
+  background: var(--sage);
+}
+
+/* ── Form Inputs ── */
+.f-input {
+  background: #FFFFFF;
+  border: 1px solid var(--sand-dark);
+  border-radius: 6px;
+  color: var(--ink);
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+.f-input::placeholder { 
+  color: #A39E94; 
+}
+.f-input:focus {
+  outline: none;
+  border-color: var(--sage);
+  box-shadow: 0 0 0 3px rgba(62, 83, 61, 0.12);
+}
+.f-input.input-error {
+  border-color: #B5351A !important;
+  box-shadow: 0 0 0 3px rgba(181, 53, 26, 0.12) !important;
+}
+
+.error-msg {
+  color: #B5351A;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 4px;
+  display: none;
+}
+.error-msg.visible { display: block; }
+
+.success-banner {
+  background: rgba(62, 83, 61, 0.08);
+  border: 1px solid #A1BC98;
+  border-left: 4px solid var(--sage);
+  border-radius: 6px;
+  padding: 18px 22px;
+}
+
+/* ── Live Hero Cockpit (Interactive Visual Anchor) ── */
+.cockpit-container {
+  background: #141513;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(24, 24, 22, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  color: #F5EFE6;
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+.cockpit-container:hover {
+  box-shadow: 0 25px 60px rgba(62, 83, 61, 0.2), 0 0 0 1px rgba(142, 170, 133, 0.25);
+}
+
+.cockpit-tab-btn {
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #8C8A82;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
+}
+.cockpit-tab-btn:hover {
+  color: #FFFFFF;
+}
+.cockpit-tab-btn.active {
+  color: #FFFFFF;
+  border-bottom-color: #8EAA85;
+}
+
+/* ── Pulse Indicator ── */
+.status-pulse {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10B981;
+  position: relative;
+}
+.status-pulse::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.4);
+  animation: pulse-ring 2s infinite cubic-bezier(0.24, 0, 0.38, 1);
+}
+@keyframes pulse-ring {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  50% { transform: scale(1.6); opacity: 0; }
+  100% { transform: scale(0.9); opacity: 0; }
+}
+
+/* ── Sticky WhatsApp Floating Action ── */
+.wa-fab {
+  background: var(--sage);
+  color: #FAF7F2;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 18px rgba(62, 83, 61, 0.35);
+}
+.wa-fab:hover {
+  background: #181816;
+  color: #A1BC98;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 24px rgba(24, 24, 22, 0.35);
+}
+
+/* ── Reveal and Safety Displays ── */
+main section,
+.hero-container,
+.services-grid {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
