@@ -333,41 +333,6 @@ html, body {
   padding: 18px 22px;
 }
 
-/* ── Live Hero Cockpit (Interactive Visual Anchor) ── */
-.cockpit-container {
-  background: #141513;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 12px;
-  box-shadow: 0 20px 50px rgba(24, 24, 22, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.05);
-  overflow: hidden;
-  color: #F5EFE6;
-  position: relative;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
-}
-.cockpit-container:hover {
-  box-shadow: 0 25px 60px rgba(62, 83, 61, 0.2), 0 0 0 1px rgba(142, 170, 133, 0.25);
-}
-
-.cockpit-tab-btn {
-  padding: 8px 14px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #8C8A82;
-  border-bottom: 2px solid transparent;
-  transition: all 0.2s ease;
-  background: transparent;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  cursor: pointer;
-}
-.cockpit-tab-btn:hover {
-  color: #FFFFFF;
-}
-.cockpit-tab-btn.active {
-  color: #FFFFFF;
-  border-bottom-color: #8EAA85;
-}
 
 /* ── Pulse Indicator ── */
 .status-pulse {

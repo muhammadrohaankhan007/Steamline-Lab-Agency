@@ -1,6 +1,6 @@
 /**
- * Steamline Lab — Senior Digital Product Studio Frontend Logic
- * Direct execution, zero bloat, high tactile responsiveness
+ * Steamline Lab — Engineering & Digital Product Studio Logic
+ * Direct execution, clean architecture, high responsiveness
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -45,59 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 3. Hero Architectural Cockpit Interactive Tabs
-  const cockpitTabs = document.querySelectorAll('.cockpit-tab-btn');
-  const cockpitPanels = document.querySelectorAll('.cockpit-panel');
-
-  if (cockpitTabs.length > 0 && cockpitPanels.length > 0) {
-    cockpitTabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const targetId = tab.getAttribute('data-tab');
-        cockpitTabs.forEach(t => t.classList.remove('active'));
-        cockpitPanels.forEach(p => p.classList.add('hidden'));
-
-        tab.classList.add('active');
-        const activePanel = document.getElementById(targetId);
-        if (activePanel) {
-          activePanel.classList.remove('hidden');
-        }
-      });
-    });
-  }
-
-  // 4. Hero Visual Anchor Subtle Tilt Effect (Desktop Only)
-  const heroCockpit = document.getElementById('hero-cockpit');
-  if (heroCockpit && window.innerWidth >= 1024) {
-    let ticking = false;
-    heroCockpit.addEventListener('mousemove', (e) => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const rect = heroCockpit.getBoundingClientRect();
-          const x = e.clientX - rect.left;
-          const y = e.clientY - rect.top;
-          const centerX = rect.width / 2;
-          const centerY = rect.height / 2;
-          const rotateX = ((y - centerY) / centerY) * -3;
-          const rotateY = ((x - centerX) / centerX) * 3;
-
-          heroCockpit.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg)`;
-          ticking = false;
-        });
-        ticking = true;
-      }
-    });
-
-    heroCockpit.addEventListener('mouseleave', () => {
-      heroCockpit.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
-      heroCockpit.style.transition = 'transform 0.4s ease';
-    });
-
-    heroCockpit.addEventListener('mouseenter', () => {
-      heroCockpit.style.transition = 'none';
-    });
-  }
-
-  // 5. Contact Form Validation & Submission
+  // 3. Contact Form Validation & Submission
   const contactForm = document.getElementById('contact-form');
   const nameInput = document.getElementById('form-name');
   const emailInput = document.getElementById('form-email');
@@ -169,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
           </svg>
-          Directing to Founders' Inbox...
+          Sending to Founders...
         `;
       }
 
@@ -188,9 +136,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Active Navigation State on Scroll
+  // 4. Active Navigation State on Scroll
   const navLinks = document.querySelectorAll('.nav-link');
-  const sections = ['home', 'services', 'about', 'testimonials', 'team', 'contact'];
+  const sections = ['home', 'services', 'about', 'team', 'contact'];
 
   function updateActiveNav() {
     const scrollPos = window.scrollY + 160;
