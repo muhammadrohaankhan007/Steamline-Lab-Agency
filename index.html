@@ -127,13 +127,15 @@
     <main class="relative z-10 flex-1 w-full flex flex-col">
 
       <!-- 1 · HERO SECTION -->
-      <section id="home" class="pt-20 sm:pt-28 pb-20 sm:pb-28 border-b border-sand relative overflow-hidden flex items-center justify-center">
+      <section id="home" class="pt-24 pb-12 sm:pb-16 border-b border-sand relative overflow-hidden flex items-center justify-center">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div class="max-w-4xl mx-auto text-center flex flex-col items-center">
 
             <!-- Clear Directional Headline -->
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-ink leading-[1.08]">
-              We design, build, and scale web products for growing companies.
+            <h1 class="text-5xl md:text-7xl font-bold text-gray-900 tracking-tight">
+              We design, build, and <br>
+              scale web products for <br>
+              growing companies.
             </h1>
 
             <!-- Direct Client Speech -->
@@ -155,195 +157,67 @@
         </div>
       </section>
 
-      <!-- 2 · SERVICES & TECHNICAL SCOPE -->
-      <section id="services" class="py-24 border-b border-sand bg-cream-soft/60">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- 2 · CAPABILITIES (LIGHT THEME STAGGERED TYPOGRAPHY) -->
+      <section id="services" class="py-24 sm:py-32 lg:py-40 bg-[#FAF7F2] text-gray-900 border-b border-sand relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-          <!-- Meaningful Section Header -->
-          <div class="max-w-3xl mb-16">
-            <div class="section-intro-pill mb-3">
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
-              Our Core Services
+          <!-- Section Label -->
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-16 sm:mb-24 pb-6 border-b border-sand gap-4">
+            <div>
+              <span class="text-xs font-mono text-sage uppercase tracking-widest block mb-2">// 02 · CAPABILITIES</span>
+              <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-ink">What We Build</h2>
             </div>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-ink tracking-tight">
-              Engineered for speed, built for business.
-            </h2>
-            <p class="mt-4 text-base text-ink-mid leading-relaxed">
-              We take projects from architecture to deployment with rigorous standards. Every deliverable is built for fast load times, clean code, and seamless long-term maintenance.
+            <p class="text-xs sm:text-sm text-ink-mid max-w-xs font-mono">
+              Bespoke digital architecture &amp; interfaces for ambitious companies.
             </p>
           </div>
 
-          <!-- Differentiated Service Cards -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <!-- Cascading Right-Leaning Massive Typography -->
+          <div class="flex flex-col space-y-4 sm:space-y-6 lg:space-y-8 select-none py-2">
 
-            <!-- Card 1: Custom SaaS & Web Applications (7-col) -->
-            <div class="lg:col-span-7 service-card service-card-featured p-8 sm:p-10 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center justify-between pb-5 border-b border-sand mb-6">
-                  <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-lg bg-sage/10 text-sage flex items-center justify-center font-bold">
-                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>
-                    </div>
-                    <div>
-                      <span class="text-xs font-semibold text-sage uppercase tracking-wider">Full-Stack Development</span>
-                      <h3 class="text-2xl font-bold text-ink">Custom Web &amp; SaaS Platforms</h3>
-                    </div>
-                  </div>
-                  <span class="text-xs font-mono text-ink-muted">4–10 wk Sprints</span>
-                </div>
+            <!-- Item 1: Websites -->
+            <a href="#contact" class="group flex items-baseline gap-3 sm:gap-6 transition-transform duration-300 hover:translate-x-3 w-fit">
+              <span class="font-mono text-xs sm:text-sm md:text-base font-semibold text-sage/70 group-hover:text-sage transition-colors">//01</span>
+              <span class="block text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold italic tracking-tighter leading-none text-ink group-hover:text-sage transition-colors duration-300">
+                Websites
+              </span>
+            </a>
 
-                <p class="text-sm text-ink-mid leading-relaxed mb-6 font-normal">
-                  End-to-end engineering for web applications, customer portals, and internal dashboards. We design robust database models, fast APIs, and modern frontends ready for real user scale.
-                </p>
+            <!-- Item 2: Platforms (staggered right) -->
+            <a href="#contact" class="group flex items-baseline gap-3 sm:gap-6 transition-transform duration-300 hover:translate-x-3 w-fit ml-6 sm:ml-16 md:ml-28 lg:ml-36">
+              <span class="font-mono text-xs sm:text-sm md:text-base font-semibold text-sage/70 group-hover:text-sage transition-colors">//02</span>
+              <span class="block text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold italic tracking-tighter leading-none text-ink group-hover:text-sage transition-colors duration-300">
+                Platforms
+              </span>
+            </a>
 
-                <div class="bg-white rounded-lg border border-sand p-5 space-y-3 mb-6">
-                  <div class="text-xs font-bold text-ink uppercase tracking-wider flex items-center gap-2">
-                    <svg class="w-4 h-4 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                    What We Deliver:
-                  </div>
-                  <div class="text-xs text-ink-mid space-y-2 leading-relaxed">
-                    <p><strong class="text-ink">High Reliability:</strong> Clean REST and GraphQL APIs with audited query performance, caching, and robust error handling.</p>
-                    <p><strong class="text-ink">Payments &amp; Subscriptions:</strong> Seamless Stripe billing integration, subscription tiers, customer portals, and automated webhooks.</p>
-                    <p><strong class="text-ink">Clean Handoff:</strong> Fully documented Git repositories, automated CI/CD deployment pipelines, and zero proprietary lock-in.</p>
-                  </div>
-                </div>
-              </div>
+            <!-- Item 3: Portfolios (staggered right) -->
+            <a href="#contact" class="group flex items-baseline gap-3 sm:gap-6 transition-transform duration-300 hover:translate-x-3 w-fit ml-12 sm:ml-32 md:ml-56 lg:ml-72">
+              <span class="font-mono text-xs sm:text-sm md:text-base font-semibold text-sage/70 group-hover:text-sage transition-colors">//03</span>
+              <span class="block text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold italic tracking-tighter leading-none text-ink group-hover:text-sage transition-colors duration-300">
+                Portfolios
+              </span>
+            </a>
 
-              <div class="pt-4 border-t border-sand flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
-                <div class="text-ink-muted">
-                  <span class="font-semibold text-ink">Tech Stack:</span> Next.js · TypeScript · Node.js · PostgreSQL · Redis · Docker
-                </div>
-                <a href="#contact" class="font-semibold text-sage hover:text-sage-dark transition-colors whitespace-nowrap">
-                  Discuss a Build &rarr;
-                </a>
-              </div>
-            </div>
-
-            <!-- Card 2: Shopify & Commerce (5-col) -->
-            <div class="lg:col-span-5 service-card p-8 sm:p-10 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center justify-between pb-5 border-b border-sand mb-6">
-                  <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-lg bg-emerald-700/10 text-emerald-800 flex items-center justify-center font-bold">
-                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-                    </div>
-                    <div>
-                      <span class="text-xs font-semibold text-sage uppercase tracking-wider">E-Commerce</span>
-                      <h3 class="text-xl font-bold text-ink">Shopify Storefronts</h3>
-                    </div>
-                  </div>
-                </div>
-
-                <p class="text-sm text-ink-mid leading-relaxed mb-6 font-normal">
-                  Fast, custom Shopify stores built to maximize conversion and average order value. We build custom Liquid themes and headless storefronts without bloated third-party apps.
-                </p>
-
-                <div class="bg-white rounded-lg border border-sand p-5 space-y-3 mb-6">
-                  <div class="text-xs font-bold text-ink uppercase tracking-wider flex items-center gap-2">
-                    <svg class="w-4 h-4 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                    What We Deliver:
-                  </div>
-                  <div class="text-xs text-ink-mid space-y-2 leading-relaxed">
-                    <p><strong class="text-ink">Sub-Second Speed:</strong> Clean, optimized code that keeps mobile loading fast to improve organic rankings and ad ROI.</p>
-                    <p><strong class="text-ink">Custom Conversion Flows:</strong> Native upsells, slide-out carts, and bundle pickers that avoid expensive monthly app fees.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="pt-4 border-t border-sand flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
-                <div class="text-ink-muted">
-                  <span class="font-semibold text-ink">Tech Stack:</span> Shopify Plus · Custom Liquid · Storefront API · Hydrogen
-                </div>
-                <a href="#contact" class="font-semibold text-sage hover:text-sage-dark transition-colors whitespace-nowrap">
-                  Discuss Commerce &rarr;
-                </a>
-              </div>
-            </div>
-
-            <!-- Card 3: UI/UX & Design Systems (5-col) -->
-            <div class="lg:col-span-5 service-card p-8 sm:p-10 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center justify-between pb-5 border-b border-sand mb-6">
-                  <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-lg bg-indigo-700/10 text-indigo-800 flex items-center justify-center font-bold">
-                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
-                    </div>
-                    <div>
-                      <span class="text-xs font-semibold text-sage uppercase tracking-wider">Product Design</span>
-                      <h3 class="text-xl font-bold text-ink">UI/UX Systems &amp; Interfaces</h3>
-                    </div>
-                  </div>
-                </div>
-
-                <p class="text-sm text-ink-mid leading-relaxed mb-6 font-normal">
-                  Thoughtful user interfaces designed by practitioners who understand production code. We create component systems and interactive prototypes that translate seamlessly to the screen.
-                </p>
-
-                <div class="bg-white rounded-lg border border-sand p-5 space-y-3 mb-6">
-                  <div class="text-xs font-bold text-ink uppercase tracking-wider flex items-center gap-2">
-                    <svg class="w-4 h-4 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
-                    What We Deliver:
-                  </div>
-                  <div class="text-xs text-ink-mid space-y-2 leading-relaxed">
-                    <p><strong class="text-ink">Design Tokens &amp; Components:</strong> Systematic Figma libraries aligned directly with Tailwind and CSS variables.</p>
-                    <p><strong class="text-ink">Frictionless UX:</strong> Clear onboarding, user account settings, and checkout flows that minimize drop-off.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="pt-4 border-t border-sand flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
-                <div class="text-ink-muted">
-                  <span class="font-semibold text-ink">Tools:</span> Figma · Interactive Prototypes · Design Systems · Accessibility
-                </div>
-                <a href="#contact" class="font-semibold text-sage hover:text-sage-dark transition-colors whitespace-nowrap">
-                  Discuss Design &rarr;
-                </a>
-              </div>
-            </div>
-
-            <!-- Card 4: Architecture & Retainers (7-col) -->
-            <div class="lg:col-span-7 service-card p-8 sm:p-10 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center justify-between pb-5 border-b border-sand mb-6">
-                  <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-lg bg-amber-700/10 text-amber-800 flex items-center justify-center font-bold">
-                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                    </div>
-                    <div>
-                      <span class="text-xs font-semibold text-sage uppercase tracking-wider">Engineering Retainers</span>
-                      <h3 class="text-2xl font-bold text-ink">Technical Architecture &amp; Growth Sprints</h3>
-                    </div>
-                  </div>
-                  <span class="text-xs font-mono text-ink-muted">Monthly Retainer</span>
-                </div>
-
-                <p class="text-sm text-ink-mid leading-relaxed mb-6 font-normal">
-                  Ongoing engineering partnership for established companies. We handle performance audits, database indexing, infrastructure maintenance, and high-priority feature sprints as your user base expands.
-                </p>
-
-                <div class="bg-white rounded-lg border border-sand p-5 space-y-3 mb-6">
-                  <div class="text-xs font-bold text-ink uppercase tracking-wider flex items-center gap-2">
-                    <svg class="w-4 h-4 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
-                    What We Deliver:
-                  </div>
-                  <div class="text-xs text-ink-mid space-y-2 leading-relaxed">
-                    <p><strong class="text-ink">Proactive Optimization:</strong> Continuous audits of page speed, database queries, and third-party integrations.</p>
-                    <p><strong class="text-ink">Dedicated Founder Sprints:</strong> Direct access to senior engineers for roadmap execution without recruiting overhead.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="pt-4 border-t border-sand flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
-                <div class="text-ink-muted">
-                  <span class="font-semibold text-ink">Scope:</span> Performance Audits · Code Refactoring · Feature Sprints · Security
-                </div>
-                <a href="#contact" class="font-semibold text-sage hover:text-sage-dark transition-colors whitespace-nowrap">
-                  Discuss a Retainer &rarr;
-                </a>
-              </div>
-            </div>
+            <!-- Item 4: UI/UX Design (staggered right) -->
+            <a href="#contact" class="group flex items-baseline gap-3 sm:gap-6 transition-transform duration-300 hover:translate-x-3 w-fit ml-16 sm:ml-48 md:ml-80 lg:ml-96">
+              <span class="font-mono text-xs sm:text-sm md:text-base font-semibold text-sage/70 group-hover:text-sage transition-colors">//04</span>
+              <span class="block text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold italic tracking-tighter leading-none text-ink group-hover:text-sage transition-colors duration-300">
+                UI/UX Design
+              </span>
+            </a>
 
           </div>
+
+          <!-- Bottom direct link -->
+          <div class="mt-20 sm:mt-24 pt-8 border-t border-sand flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <span class="text-xs font-mono text-ink-muted">High-performance engineering &amp; bespoke aesthetics</span>
+            <a href="#contact" class="font-semibold text-sm text-sage hover:text-ink transition-colors flex items-center gap-1.5 group">
+              <span>Commission a project</span>
+              <span class="inline-block transition-transform group-hover:translate-x-1">&rarr;</span>
+            </a>
+          </div>
+
         </div>
       </section>
 
@@ -369,7 +243,7 @@
               <div class="mt-8 space-y-4">
                 <div class="p-5 rounded-xl bg-white border border-sand border-l-4 border-l-sage shadow-xs">
                   <div class="text-sm font-bold text-ink">Direct Partner Collaboration</div>
-                  <div class="text-xs text-ink-mid mt-1.5 leading-relaxed">Direct daily communication with Muhammad Rohaan Khan, Syed Muhammad Shah, and Mubashir Farooq via private Slack, WhatsApp, or email.</div>
+                  <div class="text-xs text-ink-mid mt-1.5 leading-relaxed">Direct daily communication with <a href="mailto:mohammadrohaan00712@gmail.com" class="font-semibold text-ink underline hover:text-sage transition-colors">Muhammad Rohaan Khan</a>, <a href="mailto:muhammadsyed58@gmail.com" class="font-semibold text-ink underline hover:text-sage transition-colors">Syed Muhammad Shah</a>, and <a href="mailto:muhammadmubashirf2006@gmail.com" class="font-semibold text-ink underline hover:text-sage transition-colors">Mubashir Farooq</a> via private Slack, WhatsApp, or direct email.</div>
                 </div>
 
                 <div class="p-5 rounded-xl bg-white border border-sand border-l-4 border-l-terracotta shadow-xs">
@@ -460,8 +334,8 @@
                 Leads backend architecture, API design, and database engineering. Builds for performance and scale from the start.
               </p>
               <div class="pt-5 mt-5 border-t border-sand">
-                <a href="mailto:rohaan@steamlinelab.com" class="text-xs font-semibold text-sage hover:text-sage-dark transition-colors">
-                  rohaan@steamlinelab.com
+                <a href="mailto:mohammadrohaan00712@gmail.com" class="text-xs font-semibold text-sage hover:text-sage-dark transition-colors">
+                  mohammadrohaan00712@gmail.com
                 </a>
               </div>
             </div>
@@ -476,8 +350,8 @@
                 Leads Shopify builds, headless commerce, and technical operations. Specialises in fast, reliable storefronts that convert.
               </p>
               <div class="pt-5 mt-5 border-t border-sand">
-                <a href="mailto:shah@steamlinelab.com" class="text-xs font-semibold text-sage hover:text-sage-dark transition-colors">
-                  shah@steamlinelab.com
+                <a href="mailto:muhammadsyed58@gmail.com" class="text-xs font-semibold text-sage hover:text-sage-dark transition-colors">
+                  muhammadsyed58@gmail.com
                 </a>
               </div>
             </div>
@@ -492,8 +366,8 @@
                 Leads product design, UI systems, and user experience. Translates complex product requirements into clean, intuitive interfaces.
               </p>
               <div class="pt-5 mt-5 border-t border-sand">
-                <a href="mailto:mubashir@steamlinelab.com" class="text-xs font-semibold text-sage hover:text-sage-dark transition-colors">
-                  mubashir@steamlinelab.com
+                <a href="mailto:muhammadmubashirf2006@gmail.com" class="text-xs font-semibold text-sage hover:text-sage-dark transition-colors">
+                  muhammadmubashirf2006@gmail.com
                 </a>
               </div>
             </div>
@@ -520,12 +394,12 @@
 
               <!-- Quick Communication Bar -->
               <div class="mt-5 flex flex-wrap items-center justify-center sm:justify-start gap-6 text-xs font-medium">
-                <a href="mailto:contact@steamlinelab.com" class="text-sage hover:text-sage-dark font-semibold underline underline-offset-4 flex items-center gap-1.5 transition-colors">
+                <a href="mailto:mohammadrohaan00712@gmail.com" class="text-sage hover:text-sage-dark font-semibold underline underline-offset-4 flex items-center gap-1.5 transition-colors">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                  contact@steamlinelab.com
+                  mohammadrohaan00712@gmail.com
                 </a>
-                <a href="https://wa.me/?text=Hello%20Steamline%20Lab%20team,%20I'd%20like%20to%20discuss%20a%20project" target="_blank" rel="noopener noreferrer" class="text-ink-mid hover:text-sage transition-colors flex items-center gap-1">
-                  <span>Direct WhatsApp Channel</span> &rarr;
+                <a href="https://wa.me/923368565621?text=Hello%20Steamline%20Lab%20team,%20I'd%20like%20to%20discuss%20a%20project" target="_blank" rel="noopener noreferrer" class="text-ink-mid hover:text-sage transition-colors flex items-center gap-1 font-semibold">
+                  <span>WhatsApp: 03368565621</span> &rarr;
                 </a>
               </div>
             </div>
@@ -638,7 +512,7 @@
                   Inquiry Transmitted Directly to Founders
                 </div>
                 <p class="text-xs text-ink-mid leading-relaxed">
-                  Muhammad Rohaan Khan, Syed Muhammad Shah, or Mubashir Farooq will review your brief and reply directly to your email within 24 hours.
+                  Muhammad Rohaan Khan (<a href="mailto:mohammadrohaan00712@gmail.com" class="underline">mohammadrohaan00712@gmail.com</a>), Syed Muhammad Shah (<a href="mailto:muhammadsyed58@gmail.com" class="underline">muhammadsyed58@gmail.com</a>), or Mubashir Farooq (<a href="mailto:muhammadmubashirf2006@gmail.com" class="underline">muhammadmubashirf2006@gmail.com</a>) will review your brief and reply directly within 24 hours.
                 </p>
               </div>
 
@@ -686,10 +560,10 @@
           <div class="md:col-span-2">
             <div class="text-xs font-bold uppercase tracking-wider text-white mb-4">Capabilities</div>
             <ul class="space-y-2.5 text-xs text-[#A8A49A]">
-              <li><a href="#services" class="hover:text-white hover:translate-x-1 inline-block transition-all">Custom Web &amp; SaaS</a></li>
-              <li><a href="#services" class="hover:text-white hover:translate-x-1 inline-block transition-all">Shopify Storefronts</a></li>
-              <li><a href="#services" class="hover:text-white hover:translate-x-1 inline-block transition-all">UI/UX Systems</a></li>
-              <li><a href="#services" class="hover:text-white hover:translate-x-1 inline-block transition-all">Engineering Retainers</a></li>
+              <li><a href="#services" class="hover:text-white hover:translate-x-1 inline-block transition-all">Websites</a></li>
+              <li><a href="#services" class="hover:text-white hover:translate-x-1 inline-block transition-all">Platforms</a></li>
+              <li><a href="#services" class="hover:text-white hover:translate-x-1 inline-block transition-all">Portfolios</a></li>
+              <li><a href="#services" class="hover:text-white hover:translate-x-1 inline-block transition-all">UI/UX Design</a></li>
             </ul>
           </div>
 
@@ -698,8 +572,8 @@
             <div class="text-xs font-bold uppercase tracking-wider text-white mb-4">Direct Contact</div>
             <ul class="space-y-2.5 text-xs text-[#A8A49A]">
               <li>
-                <a href="mailto:contact@steamlinelab.com" class="text-white hover:text-emerald-400 underline underline-offset-4 transition-colors font-medium">
-                  contact@steamlinelab.com
+                <a href="mailto:mohammadrohaan00712@gmail.com" class="text-white hover:text-emerald-400 underline underline-offset-4 transition-colors font-medium">
+                  mohammadrohaan00712@gmail.com
                 </a>
               </li>
               <li>
@@ -708,8 +582,8 @@
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/?text=Hello%20Steamline%20Lab" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
-                  Direct WhatsApp Channel &rarr;
+                <a href="https://wa.me/923368565621?text=Hello%20Steamline%20Lab" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
+                  WhatsApp: 03368565621 &rarr;
                 </a>
               </li>
             </ul>
@@ -729,14 +603,14 @@
     </footer>
 
     <!-- ═══ STICKY WHATSAPP FLOATING BUTTON ═══ -->
-    <a href="https://wa.me/?text=Hello%20Steamline%20Lab%20team,%20I'd%20like%20to%20discuss%20a%20project"
+    <a href="https://wa.me/923368565621?text=Hello%20Steamline%20Lab%20team,%20I'd%20like%20to%20discuss%20a%20project"
        target="_blank" rel="noopener noreferrer"
        class="wa-fab fixed bottom-6 right-6 z-40 px-4 py-3 flex items-center gap-2.5 text-xs font-semibold"
        aria-label="Chat directly with Steamline Lab founders on WhatsApp">
       <svg class="w-5 h-5 fill-current flex-shrink-0" viewBox="0 0 24 24">
         <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
       </svg>
-      <span class="hidden sm:inline">WhatsApp Founders</span>
+      <span class="hidden sm:inline">WhatsApp: 03368565621</span>
     </a>
 
   </div>

@@ -109,6 +109,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!isValid) return;
 
+      const scopeEl = document.querySelector('input[name="project_scope"]:checked');
+      const scope = scopeEl ? scopeEl.value : 'Custom SaaS';
+      const budgetEl = document.getElementById('form-budget');
+      const budget = budgetEl ? budgetEl.options[budgetEl.selectedIndex].text : '';
+      const nameVal = nameInput ? nameInput.value.trim() : '';
+      const emailVal = emailInput ? emailInput.value.trim() : '';
+      const detailsVal = detailsInput ? detailsInput.value.trim() : '';
+
       const originalText = submitBtn ? submitBtn.innerHTML : 'Send Inquiry to Founders';
       if (submitBtn) {
         submitBtn.disabled = true;
@@ -117,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
           </svg>
-          Sending to Founders...
+          Routing to Founders...
         `;
       }
 
@@ -126,6 +134,12 @@ document.addEventListener('DOMContentLoaded', () => {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalText;
         }
+
+        // Direct mailto routing to Rohaan, Syed Muhammad Shah, and Mubashir
+        const subject = encodeURIComponent(`Project Inquiry: ${scope} — ${nameVal}`);
+        const body = encodeURIComponent(`Client Name: ${nameVal}\nClient Email: ${emailVal}\nProject Scope: ${scope}\nEstimated Budget: ${budget}\n\nProject Brief:\n${detailsVal}`);
+        window.location.href = `mailto:mohammadrohaan00712@gmail.com?cc=muhammadsyed58@gmail.com,muhammadmubashirf2006@gmail.com&subject=${subject}&body=${body}`;
+
         contactForm.reset();
 
         if (successBanner) {
